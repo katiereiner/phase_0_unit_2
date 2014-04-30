@@ -14,7 +14,11 @@
 
 
 # 2. Initial Solution
+total([1,2,3,4])
+# => 10
 
+sentence_maker (["i", "want", "to", "learn", "how", "to", "code"])
+# => "I want to learn how to code"
 
 
 
