@@ -13,8 +13,24 @@
 
 
 # 2. Initial Solution
-
-
+def comma(int)
+	num=int.to_s
+	arr=num.split(//)
+	num=""
+	count = 0
+	for i in 0...arr.length
+		puts arr[arr.length-i-1]
+		if count %3 != 0
+			num.insert(0,arr[arr.length-i-1])
+		else 
+			num.insert(0,",")
+			num.insert(0,arr[arr.length-i-1])
+		end
+		count += 1
+	end
+	puts num 
+end
+	comma(123456789)
 
 
 # 3. Refactored Solution
