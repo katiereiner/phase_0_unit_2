@@ -11,17 +11,21 @@ boggle_board = [["b", "r", "a", "e"],
 # Part 1: Access multiple elements of a nested array
 
 # Pseudocode
+	# creates a method: create_word
+	# create_word passed in 2 arguments
+	# mapping coordinates of boggle board
 
 # Initial Solution
-
+def create_word(board, *coords)
+    coords.map { |coord| board[coord.first][coord.last]}.join("")
+  end
 
 # Refactored Solution
 
 
 # DRIVER TESTS GO BELOW THIS LINE
-
-
-# Reflection 
+puts create_word(boggle_board, [2,1], [1,1], [1,2], [0,3])  #=> returns "code"  
+puts create_word(boggle_board, [0,1], [0,2], [1,2])  #=> returns "rad"
 
 #-------------------------------------------------------------------------------
 
@@ -30,13 +34,17 @@ boggle_board = [["b", "r", "a", "e"],
 # Pseudocode
 
 # Initial Solution
-
+def get_row(board, row)
+    board[row] 
+end
 
 # Refactored Solution
 
 
 # DRIVER TESTS GO BELOW THIS LINE
 
+p get_row(boggle_board, 1) #=>  ["i", "o", "d", "t"]
+p get_row(boggle_board, 2) #=>  ["e", "c", "l", "r"]
 
 # Reflection 
 
@@ -48,13 +56,17 @@ boggle_board = [["b", "r", "a", "e"],
 
 # Pseudocode
 
-# Initial Solution
 
+# Initial Solution
+def get_col(board, col)
+    board.transpose[col]
+end
 
 # Refactored Solution
 
 
 # DRIVER TESTS GO BELOW THIS LINE
-
+p get_col(boggle_board, 1)  #=>  ["r", "o", "c", "a"]
+p get_col(boggle_board, 2) #=> ['a','d','l','k']
 
 # Reflection 

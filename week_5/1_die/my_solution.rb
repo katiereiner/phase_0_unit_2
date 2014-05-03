@@ -9,20 +9,20 @@
 # Output:
 # Steps:
 
-
 # 3. Initial Solution
 
 class Die
   def initialize(sides)
-    # code goes here
+    @sides=sides
+    	raise ArgumentError.new("sides cannot be less than 1") if @sides < 1
   end
-  
+
   def sides
-    # code goes here
+    @sides
   end
   
   def roll
-    # code goes here
+    rand(1..@sides)
   end
 end
 
