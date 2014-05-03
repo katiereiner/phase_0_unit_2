@@ -59,7 +59,7 @@ p get_row(boggle_board, 2) #=>  ["e", "c", "l", "r"]
 
 # Initial Solution
 def get_col(board, col)
-    board.transpose[col]
+    board.transpose[col] 
 end
 
 # Refactored Solution
