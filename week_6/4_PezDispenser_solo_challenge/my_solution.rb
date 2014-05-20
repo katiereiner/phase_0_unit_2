@@ -21,7 +21,17 @@
 # 3. Initial Solution
 
 class PezDispenser
- 
+
+	def initialize(pez)
+		@pez = pez
+		pez(flavors)
+	end
+
+	def initialize(flavors)
+		flavors.count
+
+		end
+
 # your code here!
  
 end

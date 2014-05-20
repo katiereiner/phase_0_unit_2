@@ -14,7 +14,13 @@
 
 
 # 2. Initial Solution
+class Array
+	def pad
 
+
+
+
+end
 
 
 

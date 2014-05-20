@@ -9,6 +9,25 @@
 
 
 # Initial Solution
+class Song
+	attr_reader :song, :band
+	def initialize(song,band)
+		@song = song
+		@band = band
+	end
+end 
+
+class Playlist
+	attr_reader :song
+	def initialize(*song)
+		@song = [*song]
+	end
+	def add(*new_song)
+		@song.push(*new_song)
+	end
+
+end
+
 
 
 
@@ -31,14 +50,14 @@ lying_from_you = Song.new("Lying From You", "Linkin Park")
 angels = Song.new("Angels", "Within Temptation")
  
 my_playlist.add(lying_from_you, angels)
-p my_playlist.num_of_tracks == 5
-going_under.play
-my_playlist.remove(angels)
-p my_playlist.includes?(lying_from_you) == true
-my_playlist.play_all
-my_playlist.display
+#p my_playlist.num_of_tracks == 5
+#going_under.play
+#my_playlist.remove(angels)
+#p my_playlist.includes?(lying_from_you) == true
+#my_playlist.play_all
+#my_playlist.display
 
-
+print my_playlist.song
 
 
 
